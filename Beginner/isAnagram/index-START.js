@@ -7,9 +7,34 @@ don't. E.g
 
 
 
+
+// fn that takes in two strings, and return true/false if they are anagrams of each other
+
+// stringA, stringB -> length >= 1, not case-sensitive
+
+// return boolean -> true/false, 
+
+
+// "listen", "silent" -> true
+// "map", "amp" -> true
+// "word", "bird" -> false
+
+
+
+
 function isAnagram(stringA, stringB) {
-    // Code goes here
+    // loop through stringA
+    for (let char of stringA) {
+        // replace each char of stringA in stringB
+        stringB = stringB.replace(char, "")
+    }
+    // check if stringB === empty string
+    return (stringB === "")
 }
+
+// console.log(isAnagram("listen","silent"), true )
+// console.log(isAnagram("map","amp"), true )
+// console.log(isAnagram("word","bird"), false )
 
 
 module.exports = isAnagram
