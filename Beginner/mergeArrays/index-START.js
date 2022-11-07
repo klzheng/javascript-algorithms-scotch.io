@@ -6,16 +6,16 @@
 
 function mergeArrays(...arrays) {
 
-    let jointArray = []
-    
-    arrays.forEach(array => {
-        jointArray = [...jointArray, ...array]
-    });
+    let combinedArray = []
+    arrays.forEach(arr => {
+        combinedArray = [...combinedArray, ...arr]})
 
-    return [...new Set([...jointArray])]
-
-    
+    let mergedArr = new Set(combinedArray)
+    return Array.from(mergedArr)
 }
+
+
+console.log(mergeArrays([1,2,3,3,3], [1,4,5,2]))
 
 
 module.exports = mergeArrays

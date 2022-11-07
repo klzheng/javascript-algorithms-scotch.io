@@ -14,10 +14,9 @@ E.g  falsyBouncer([1, 0, null, '', 5]) // should return [1,5]
 
 
 function falsyBouncer(array) {
-    array = array.filter(item => {
+    return array.filter(item => {
         if (item) return item
     })
-    return array
 }
 
 
